@@ -45,7 +45,7 @@ actionTypes.some.foo.bar // "app-some-foo-bar"
 ```
 
 ### The actionTypes look like that
-```json
+```js
 {
   auth: {
     login: "app-auth-login",

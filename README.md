@@ -45,7 +45,7 @@ actionTypes.some.foo.bar // "app-some-foo-bar"
 ```
 
 ### 创建出来的actionTypes 就像下面这样
-```json
+```js
 {
   auth: {
     login: "app-auth-login",
