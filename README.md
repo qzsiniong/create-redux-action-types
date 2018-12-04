@@ -13,8 +13,8 @@ yarn add create-redux-action-types
 
 ## 使用
 
+### 文件:actions/actionTypes.ts
 ```ts
-# 文件:actionTypes.ts
 import createReduxActionTypes from "create-redux-action-types"
 
 export default createReduxActionTypes(
@@ -36,16 +36,16 @@ export default createReduxActionTypes(
 
 ```
 
+### 文件:actions/some.ts
 ```ts
-# 文件:some.ts
 import actionTypes from "./actionTypes"
 
 actionTypes.auth.login // "app-auth-login"
 actionTypes.some.foo.bar // "app-some-foo-bar"
 ```
 
+### 创建出来的actionTypes 就像下面这样
 ```json
-// 创建出来的actionTypes 就像下面这样
 {
   auth: {
     login: "app-auth-login",

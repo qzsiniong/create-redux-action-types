@@ -13,8 +13,8 @@ yarn add create-redux-action-types
 
 ## Usage
 
+### file:actions/actionTypes.ts
 ```ts
-# file:actionTypes.ts
 import createReduxActionTypes from "create-redux-action-types"
 
 export default createReduxActionTypes(
@@ -36,16 +36,16 @@ export default createReduxActionTypes(
 
 ```
 
+### file:actions/some.ts
 ```ts
-# file:some.ts
 import actionTypes from "./actionTypes"
 
 actionTypes.auth.login // "app-auth-login"
 actionTypes.some.foo.bar // "app-some-foo-bar"
 ```
 
+### The actionTypes look like that
 ```json
-// actionTypes look like that
 {
   auth: {
     login: "app-auth-login",
