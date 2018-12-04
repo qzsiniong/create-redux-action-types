@@ -1,5 +1,5 @@
 {
-  "name": "create-redux-actions-types",
+  "name": "create-redux-action-types",
   "version": "0.0.1",
   "description": "Create redux action types with normal javascript object",
   "main": "./dist/createReduxActionTypes.js",
