@@ -1,0 +1,53 @@
+{
+  "name": "create-redux-actions-types",
+  "version": "0.0.1",
+  "description": "Create redux action types with normal javascript object",
+  "main": "./dist/createReduxActionTypes.js",
+  "types": "./dist/createReduxActionTypes.d.ts",
+  "typings": "./dist/createReduxActionTypes.d.ts",
+  "scripts": {
+    "prepare": "npm run rebuild",
+    "pretest": "npm run lint",
+    "test": "mocha --require ts-node/register src/**/*.ts test/*.ts",
+    "lint": "tslint --project ./tsconfig.json",
+    "cover": "nyc --all  --reporter=html --reporter=text --reporter=lcov npm run test",
+    "prebuild": "npm run test",
+    "build": "tsc -p .",
+    "rebuild": "npm run clean && npm run build",
+    "prepublishOnly": "npm run build",
+    "clean": "rm -rf dist"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qzsiniong/create-redux-action-types.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qzsiniong/create-redux-action-types/issues"
+  },
+  "homepage": "https://github.com/qzsiniong/create-redux-action-types",
+  "keywords": [
+    "react",
+    "redux",
+    "redux-actions",
+    "types"
+  ],
+
+  "author": "qzsiniong",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.2.1"
+  },
+  "dependencies": {}
+}
