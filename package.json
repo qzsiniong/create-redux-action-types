@@ -1,6 +1,6 @@
 {
   "name": "create-redux-action-types",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Create redux action types with normal javascript object",
   "main": "./dist/createReduxActionTypes.js",
   "types": "./dist/createReduxActionTypes.d.ts",
@@ -36,7 +36,6 @@
     "redux-actions",
     "types"
   ],
-
   "author": "qzsiniong",
   "license": "MIT",
   "devDependencies": {
