@@ -23,9 +23,11 @@ export default createReduxActionTypes(
       login: "",
       logout: "",
     },
-    some: {
-      foo: {
-        bar: ""
+    user: {
+      get: {
+        pending: "",
+        fulfilled: "",
+        rejected: ""
       }
     }
   },
@@ -40,8 +42,11 @@ export default createReduxActionTypes(
 ```ts
 import actionTypes from "./actionTypes"
 
-actionTypes.auth.login // "app-auth-login"
-actionTypes.some.foo.bar // "app-some-foo-bar"
+actionTypes.auth.login          // "app-auth-login"
+String(actionTypes.user.get)    // "app-user-get-"
+actionTypes.user.get.pending    // "app-user-get-pending"
+actionTypes.user.get.fulfilled  // "app-user-get-fulfilled"
+actionTypes.user.get.rejected   // "app-user-get-rejected"
 ```
 
 ### The actionTypes look like that
@@ -51,9 +56,11 @@ actionTypes.some.foo.bar // "app-some-foo-bar"
     login: "app-auth-login",
     logout: "app-auth-logout",
   },
-  some: {
-    foo: {
-      bar: "app-some-foo-bar"
+  user: {
+    get: {
+      pending: "app-user-get-pending",
+      fulfilled: "app-user-get-fulfilled",
+      rejected: "app-user-get-rejected"
     }
   }
 }

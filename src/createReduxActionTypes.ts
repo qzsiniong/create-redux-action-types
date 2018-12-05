@@ -13,6 +13,16 @@ const initActionTypeNamespace = (obj: IActionTypes, delimiter: string, objName?:
         actionTypeNamespace = actionTypeNamespace + objName
     }
 
+    // Object toString
+    (obj as any)[Symbol.toPrimitive] = (hint: string) => {
+        switch (hint) {
+            case "string":
+                return actionTypeNamespace + delimiter
+            default:
+                throw new Error()
+        }
+    }
+
     for (const propertyName in obj) {
         if (obj.hasOwnProperty(propertyName)) {
             const propertyValue = obj[propertyName]
