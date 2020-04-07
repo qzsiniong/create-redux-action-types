@@ -1,3 +1,5 @@
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/qzsiniong/create-redux-action-types) 
+
 # Create Redux Action Types
 
 使用一个普通的javascript对象来创建 redux 的 actionTypes.
